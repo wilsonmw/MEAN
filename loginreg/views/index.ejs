@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+</head>
+<body>
+    <h3>Login</h3>
+    <form action='/sessions' method="POST">
+        Email: <input type="text" name="email"><br>
+        <br>
+        Password: <input type="text" name="password"><br>
+        <br>
+        <input type="submit" value="Login">
+    </form>
+    <h3>Registration</h3>
+    <%= registrationMessage %>
+    <form action='/users' method="POST">
+        <% if(registrationErrors[0] && registrationErrors[0].errors.first_name){ %>
+            <%= registrationErrors[0].errors.first_name.message %>
+        <% } %><br>
+        First Name: <input type="text" name="first_name"><br>
+        <% if(registrationErrors[0] && registrationErrors[0].errors.last_name){ %>
+            <%= registrationErrors[0].errors.last_name.message %>
+        <% } %><br>
+        Last Name: <input type="text" name="last_name"><br>
+        <% if(registrationErrors[0] && registrationErrors[0].errors.birthdate){ %>
+            <%= registrationErrors[0].errors.birthdate.message %>
+        <% } %><br>
+        Birthday: <input type="date" name="birthdate"><br>
+        <% if(registrationErrors[0] && registrationErrors[0].errors.email){ %>
+            <%= registrationErrors[0].errors.email.message %>
+        <% } %><br>
+        Email: <input type="text" name="email"><br>
+        <% if(registrationErrors[0] && registrationErrors[0].errors.password){ %>
+            <%= registrationErrors[0].errors.password.message %>
+        <% } %><br>
+        Password: <input type="text" name="password"><br>
+        <%= passMatchMessage %><br>
+        Confirm Password: <input type="text" name="confirm_pw"><br>
+        <br>
+        <input type="submit" value="Register">
+    </form>
+
+</body>
+</html>

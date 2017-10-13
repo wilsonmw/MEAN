@@ -1,0 +1,7 @@
+.box{
+    width: 25%;
+    background-color: tan;
+    display: inline-block;
+    border: 1px solid black;
+    margin: 1%;
+}

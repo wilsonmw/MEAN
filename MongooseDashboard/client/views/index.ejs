@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Dragons</title>
+</head>
+<body>
+    <h1>Dragon Dashboard</h1>
+    <a href="/dragons/new">Add a New Dragon</a>
+
+    <% for(var idx in dragons){ %>
+        <hr>
+        <h3>Name: <a href='/dragons/<%= dragons[idx]._id %>'><%= dragons[idx].name %></a></h3>
+        <h3>Age: <%= dragons[idx].age %></h3>
+        <a href="/dragons/destroy/<%= dragons[idx]._id %>">Destroy This Dragon</a>
+        <hr>
+    <% } %>
+    
+    
+</body>
+</html>

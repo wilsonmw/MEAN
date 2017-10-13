@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    
+    <title>Add a Dragon</title>
+</head>
+<body>
+    <h1>Add a New Dragon</h1>
+    <form action ='/dragons' method="POST">
+        Name: <input type='text' name='name'><br>
+        <br>
+        Age: <input type='number' name='age'><br>
+        <br>
+        Size: <input type='text' name='size'><br>
+        <br>
+        Fire-Breathing: <select name='fire'>
+            <option value="Yes">Yes</option>
+            <option value="No">No</option>
+        </select><br>
+        <br>
+        Favorite Food: <input type="text" name='faveFood'><br>
+        <br>
+        <input type='submit' value='Add Dragon'><br>
+    </form>
+    <br>
+    <a href='/'>Go Back</a>
+</body>
+</html>

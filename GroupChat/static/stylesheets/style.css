@@ -1,0 +1,29 @@
+#chatbox{
+    margin-left: 15%;
+    border: 1px solid black;
+    width: 60%;
+    padding: 10px;
+    height: 600px;
+    overflow: scroll;
+    box-shadow: 5px 0px 0px 0px;
+}
+
+#messageBox{
+    margin-left: 15%;
+    border: 1px solid black;
+    width: 60%;
+    padding: 10px;
+    box-shadow: 5px 5px 0px 0px;
+}
+body{
+    background-color: lightgray;
+}
+#submitButton{
+    box-shadow: 5px 5px 0px 0px;
+    height: 25px;
+}
+#message{
+    background-color: lightpink;
+    height: 30px;
+    width: 50%;
+}

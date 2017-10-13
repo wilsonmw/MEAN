@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Dragon</title>
+</head>
+<body>
+    <% for(var idx in dragon){ %>
+        <hr>
+        <h3>Name: <%= dragon[idx].name %></h3>
+        <h3>Age: <%= dragon[idx].age %></h3>
+        <h3>Size: <%= dragon[idx].size %></h3>
+        <h3>Fire-Breathing: <%= dragon[idx].fire %></h3>
+        <h3>Favorite Food: <%= dragon[idx].faveFood %></h3>
+        <a href='/dragons/edit/<%=dragon[idx]._id %>'>Edit Dragon Info</a>
+        <hr>
+    <% } %>
+    <a href="/">Go Back</a>
+</body>
+</html>

@@ -1,0 +1,12 @@
+<h1>Time Zone Display</h1>
+<div id="buttonList">
+  <button (click)='getTime("PST")' [ngClass]="{'yellow': pswitch}">Pacific Time</button>
+  <button (click)='getTime("MST")' [ngClass]="{'yellow': mswitch}">Mountain Time</button>
+  <button (click)='getTime("CST")' [ngClass]="{'yellow': cswitch}">Central Time</button>
+  <button (click)='getTime("EST")' [ngClass]="{'yellow': eswitch}">Eastern Time</button>
+  <button (click)='clear()'>Clear</button>
+</div>
+<br>
+<div id="timeDisplay">
+  {{ now | date:'longDate' }} {{ now | date:'shortTime'}}
+</div>

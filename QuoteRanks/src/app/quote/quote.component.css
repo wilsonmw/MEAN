@@ -1,0 +1,27 @@
+.quoteBox{
+    border: 2px solid black;
+}
+.quoteContents{
+    display: inline-block;
+    width: 65%;
+}
+.buttons{
+    display: inline-block;
+}
+button{
+    display: block;
+    height: 30px;
+    box-shadow: 4px 4px 2px gray;
+    margin: 7%;
+}
+#upVote{
+    background-color: green;
+}
+#downVote{
+    background-color: red;
+}
+
+#delete{
+    background-color: black;
+    color: white;
+}

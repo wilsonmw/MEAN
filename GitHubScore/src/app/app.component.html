@@ -1,0 +1,8 @@
+<h1>GitHub Score</h1>
+<form #formData = "ngForm" (submit)="getUser()">
+  GitHub Username: <input type='text' name='username' [(ngModel)]='username' required>
+  <input type='submit' [disabled]="formData.invalid" value="Calculate GitHub Score">
+</form>
+<div *ngIf="doesNotExist == true">User does not exist. Please try again.</div>
+
+<app-score [score]='score'></app-score>

@@ -1,0 +1,21 @@
+form{
+    border: 2px solid black;
+    width: 25%;
+    padding: 2%;
+    text-align: right;
+    margin-top: 15px;
+}
+input{
+    margin: 1%;
+}
+#subButton2{
+    background-color: green;
+    color: white;
+    height: 30px;
+}
+button{
+    background-color: red;
+    color: white;
+    height: 30px;
+    margin: 1%;
+}

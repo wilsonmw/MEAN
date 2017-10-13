@@ -1,0 +1,39 @@
+#loginForm{
+    border: 1px solid black;
+    width: 30%;
+    margin: 5%;
+    text-align: right;
+    padding: 1%;
+    display: inline-block;
+    vertical-align: top;
+}
+
+#regForm{
+    border: 1px solid black;
+    width: 30%;
+    margin: 5%;
+    text-align: right;
+    padding: 1%;
+    display: inline-block;
+}
+
+#loginSubmit{
+    width: 95%;
+    background-color: green;
+    height: 30px;
+    color: white;
+}
+
+#regSubmit{
+    width: 95%;
+    background-color: blue;
+    height: 30px;
+    color: white;
+}
+input{
+    margin: 0.5%;
+}
+
+.errorMessages{
+    color: red;
+}

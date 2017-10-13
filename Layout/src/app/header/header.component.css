@@ -1,0 +1,13 @@
+#header{
+    display: block;
+    height: 100px;
+    background-color: lightblue;
+    border: 2px solid black;
+    margin: 2%;
+    padding: 2%;
+
+}
+h1{
+    font-size: 2.4em;
+    font-family: Arial, Helvetica, sans-serif;
+}

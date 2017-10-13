@@ -1,0 +1,8 @@
+<h2>Add a Quote</h2>
+<form (submit)="onSubmit()" #formData="ngForm">
+  <textarea name='content' rows='7' cols='40' [(ngModel)]="quote.content" #content="ngModel" required minlength="4"></textarea>
+  Author: <input type="text" name="author" [(ngModel)]="quote.author" #author='ngModel' required minlength="2">
+  <input type="submit" value="Add Quote" *ngIf="formData.valid">
+</form>
+
+<app-quote *ngFor="let quote of quotes, let idx = index" [quote]='quote' [idx]='idx' (addingVotes)="addVotes(idx)" (subtractingVotes)="subtractVotes(idx)" (deleteQuote)="delete(idx)"></app-quote>

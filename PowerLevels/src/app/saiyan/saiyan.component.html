@@ -1,0 +1,7 @@
+<div class="box">
+    <h3>Saiyan</h3>
+    <h3>Power Level: {{displayPower.saiyan}}</h3>
+    <h4 *ngIf="displayPower.saiyan > 9000 && displayPower.saiyan <= 20000">Over 9000!</h4>
+    <h4 *ngIf="displayPower.saiyan > 20000 && displayPower.saiyan < 50000">Superlative!</h4>
+    <h4 *ngIf="displayPower.saiyan >= 50000">The One!</h4>
+</div>

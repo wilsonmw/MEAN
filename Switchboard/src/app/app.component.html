@@ -1,0 +1,7 @@
+<h1>Switchboard</h1>
+<div id="back">
+  <div id="buttonRow" *ngFor="let flip of switches, let idx=index">
+    <button *ngIf="flip==true" (click)="flipSwitch(idx)" [ngStyle]="{'background-color':'green'}">On</button>
+    <button *ngIf="flip==false" (click)="flipSwitch(idx)" [ngStyle]="{'background-color':'red'}">Off</button>
+  </div>
+</div>  

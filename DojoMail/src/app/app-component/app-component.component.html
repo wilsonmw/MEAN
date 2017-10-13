@@ -1,0 +1,22 @@
+
+<div [ngStyle]="{
+  'border':'1px solid black'}">
+  <h1>Dojo Mail</h1>
+  <table>
+    <tr>
+      <th>Email</th>
+      <th>Importance</th>
+      <th>Subject</th>
+      <th>Content</th>
+    </tr>
+    <tr *ngFor='let idx of emails'>
+      <td>{{idx.email | lowercase}}</td>
+      <td *ngIf='idx.importance == true'>High</td>
+      <td *ngIf='idx.importance == false'>Low</td>
+      <td>{{idx.subject}}</td>
+      <td>{{idx.content}}</td>
+    </tr>
+  </table>
+</div>
+
+

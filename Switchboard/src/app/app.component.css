@@ -1,0 +1,14 @@
+button{
+    width: 99%;
+    height: 60px;
+}
+#buttonRow{
+    display: inline-block;
+    width: 8%;
+    margin: 1%;
+}
+#back{
+    background-color: brown;
+    width: 55%;
+    text-align: center;
+}

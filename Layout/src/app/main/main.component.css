@@ -1,0 +1,10 @@
+#main{
+    display: inline-block;
+    width: 63%;
+    background-color: lightblue;
+    border: 2px solid black;
+    height: 400px;
+    vertical-align: top;
+    margin: 2%;
+    padding: 2%;
+}

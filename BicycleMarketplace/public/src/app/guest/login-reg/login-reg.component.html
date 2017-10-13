@@ -1,0 +1,21 @@
+
+<form id="loginForm" #loginFormData="ngForm" (submit)="loginSubmit()">
+  <span class="errorMessages" *ngIf="loginError == true">You fucked up!</span><br>
+  *Email: <input type='text' name="email" required [(ngModel)]="loginUser.email"><br>
+  *Password: <input type='text' name='password' required [(ngModel)]="loginUser.password"><br>
+  <input type='submit' value="Login" id="loginSubmit" [disabled]="loginFormData.invalid"><br>
+</form>
+
+<form id="regForm" #regFormData="ngForm" (submit)="regSubmit()">
+  <span *ngIf="first_name.invalid && first_name.touched" class="errorMessages">First Name is required and must be at least 2 characters</span><br>
+  *First Name: <input type="text" name="first_name" required minlength="2" [(ngModel)]="regUser.first_name" #first_name="ngModel"><br>
+  <span *ngIf="last_name.invalid && last_name.touched" class="errorMessages">Last Name is required and must be at least 2 characters</span><br>
+  *Last Name: <input type="text" name="last_name" required minlength="2" [(ngModel)]="regUser.last_name" #last_name="ngModel"><br>
+  <span *ngIf="email.invalid && email.touched" class="errorMessages">Email is required</span><br>
+  *Email: <input type="text" name="email" required minlength="2" [(ngModel)]="regUser.email" #email="ngModel"><br>
+  <span *ngIf="password.invalid && password.touched" class="errorMessages">Password is required and must be at least 8 characters</span><br>
+  *Password: <input type="text" name="password" required minlength="8" [(ngModel)]="regUser.password" #password="ngModel"><br>
+  <span *ngIf="regUser.pwConfirm != regUser.password && pwConfirm.touched" class="errorMessages">Password Confirmation is required and must match Password</span><br>
+  *Password Confirmation: <input type="text" name="pwConfirm" required minlength="8" [(ngModel)]="regUser.pwConfirm" #pwConfirm="ngModel">
+  <input type="submit" value="Register" id="regSubmit" [disabled]="regFormData.invalid">
+</form>  

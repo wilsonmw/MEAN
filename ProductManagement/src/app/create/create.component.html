@@ -1,0 +1,6 @@
+<form (submit)='onSubmit()' #formData = "ngForm">
+  Title: <input type='text' name='title' required minlength="4" [(ngModel)]='product.title' #title="ngModel"><br>
+  Price: <input type="text" name="price" required [(ngModel)]='product.price' #price="ngModel"><br>
+  Image URL: <input type="text" name="imageURL" [(ngModel)]='product.imageURL'><br>
+  <input id="subButton" type="submit" value="Create" [disabled]='formData.invalid'><br>
+</form>

@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Quoting Dojo</title>
+</head>
+<body>
+    <h1>The Quotes Page</h1>
+    <% for(var idx in quotes){ %>
+        <h3>"<%= quotes[idx].quote %>"</h3>
+        <% var monthNames = ["Januear", "February", "March", "April", "May", "June", "July", "August", "September", "October", "November", "December"] %>
+        <% var d = quotes[idx].createdAt.getDate();
+            var m = monthNames[quotes[idx].createdAt.getMonth()];
+            var y = quotes[idx].createdAt.getFullYear(); 
+            var min = quotes[idx].createdAt.getMinutes(); 
+            var hour = quotes[idx].createdAt.getHours();%>
+        
+        <h3>-<%= quotes[idx].name %> at <%= hour %>:<%= min %> on <%= m %> <%= d %>, <%= y %></h3><hr>
+
+    <% } %>
+
+    <form action="/delete" method="POST">
+        <input type="submit" value = "Delete All Quotes!">
+    </form>
+    <form action="/" method="GET">
+        <input type="submit" value = "Go Back to Add A Quote!">
+    </form>
+</body>
+</html>
